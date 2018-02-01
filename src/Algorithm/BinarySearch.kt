@@ -5,7 +5,7 @@ package Algorithm
             val mid = low + (high - low) / 2
             if (arr[mid] == x)
                 return mid
-            return if (arr[mid] > x) binarySearch(arr, high, mid - 1, x)
+            return if (arr[mid] > x) binarySearch(arr, low, mid - 1, x)
                     else binarySearch(arr, mid + 1, high, x)
         }
         return -1
